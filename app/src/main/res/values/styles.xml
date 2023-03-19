@@ -1,0 +1,8 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Remove the title text -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- Remove the black background -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>
