@@ -44,10 +44,15 @@ public class MainActivity extends AppCompatActivity {
         // Activer le chargement de contenu mixte (http et https)
         webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
+        // Active le zoom/dézoom
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+
         // Activer le stockage DOM (Document Object Model) pour la gestion des données locales
         webView.getSettings().setDomStorageEnabled(true);
 
-        // Désactiver les publicités par défaut
+        // Cache les pubs sur le site
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
